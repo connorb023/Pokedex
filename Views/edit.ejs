@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet" href="/public/style.css">
+
+    <title>Edit pokemon</title>
+</head>
+<body>
+    <h1>Edit pokemon <%= pokemon.name %></h1>
+    <form action="'/pokemon<%= pokemon.id %> ?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= pokemon.name %>"> required>
+        <label for="img">Image URL:</label>
+        <input type="text" id="name" name="name" value="<%= pokemon.name %>"> required>
+        <label for="type">Types:</label>
+        <input for="hp">HP:</label>
+        <input type="number" id="hp" name="stats[hp]" value="<%= pokemon.stats.hp %>" required>
+        <label for="attack">Attack:</label>
+        <input type="number" id="attack" name="stats[attack]" value ="<%= pokemon.stats.attack %>" required>
+        <label for="defense">Defense:</label>
+        <input type="number" id="defense" name="stats[defense]" value ="<%= pokemon.stats.defense %>" required>
+        <input type="submit">Update</button>
+    </form>
+    <br>
+    <a href="/">Back to List</a>
+</body>
+</html>
