@@ -57,9 +57,9 @@ index: req.params.id,
 
 //Show
 
-app.get("/pokemon/:indexOfpokemonArray", (req, res) => {
-    res.render("show.ejs",{pokemon: pokemon [req.params.indexOfpokemonArray]})
-  })
+app.get("/pokemon/:id", (req,res) => {
+  res.render("show.ejs", { pokemon:pokemon[req.params.id]})
+})
   
 
 app.listen(port, () => {
