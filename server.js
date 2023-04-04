@@ -22,10 +22,16 @@ app.get('/pokemon/new', (req, res) => {
   });
 
 //Delete 
-app.delete("/pokemon/:id", (req, res) => {
-  pokemon.splice(req.params.id,) /
-  res.redirect("/pokemon") 
-})
+app.delete("/pokemon/:id",(req, res) => {
+    pokemon.splice(req.params.id,1)
+    res.redirect("/pokemon") 
+});
+
+
+// (req, res) => {
+//   pokemon.splice(req.params.id,) /
+//   res.redirect("/pokemon") 
+// })
 
 //Update
 app.put("/pokemon/:id/", (req, res) => {
@@ -35,13 +41,7 @@ app.put("/pokemon/:id/", (req, res) => {
 
 //Create
 app.post("/pokemon", (req, res) => {
-    pokemon.push({
-      name: req.body.name,
-      types: req.body.type,
-      hp: req.body.hp,
-      attack: req.body.attack,
-      defense: req.body.defense,
-    })
+    pokemon.push(req.body)
     res.redirect("/pokemon")
   })
   
