@@ -23,7 +23,7 @@ app.get('/pokemon/new', (req, res) => {
 
 //Delete 
 app.delete("/pokemon/:id", (req, res) => {
-  pokemon.splice(req.params.id, 1) /
+  pokemon.splice(req.params.id,) /
   res.redirect("/pokemon") 
 })
 
@@ -37,7 +37,6 @@ app.put("/pokemon/:id/", (req, res) => {
 app.post("/pokemon", (req, res) => {
     pokemon.push({
       name: req.body.name,
-      img: req.body.img,
       types: req.body.type,
       hp: req.body.hp,
       attack: req.body.attack,
@@ -59,7 +58,8 @@ index: req.params.id,
 
 app.get("/pokemon/:id", (req,res) => {
   res.render("show.ejs", { pokemon:pokemon[req.params.id]})
-})
+});
+
   
 
 app.listen(port, () => {
