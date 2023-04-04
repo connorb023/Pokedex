@@ -4,8 +4,8 @@ body {
     background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover; /* or object-fit: contain; */
+    width:400px;
+    height:400px;
+    object-fit:contain
   }
   
