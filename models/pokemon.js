@@ -1,4 +1,4 @@
-module.exports = [
+pokemon = [
   {
     id: "001",
     name: "Bulbasaur",
