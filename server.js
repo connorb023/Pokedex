@@ -13,12 +13,19 @@ app.use("/public",express.static("public"));
 
 //Index 
 app.get("/pokemon/", (req,res) => {
-    res.render("index.ejs",{allpokemon:pokemon})
+    res.render("index.ejs",{pokemon:pokemon})
 })
 
+// New
 app.get('/pokemon/new', (req, res) => {
     res.render('new.ejs');
   });
+
+//Delete 
+app.delete("/pokemon/:id", (req, res) => {
+  pokemon.splice(req.params.id, 1) /
+  res.redirect("/pokemon") 
+})
 
 app.post("/pokemon", (req, res) => {
     pokemon.push({
