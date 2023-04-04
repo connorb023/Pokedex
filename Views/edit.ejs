@@ -2,28 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=" stylesheet" href="/public/style.css">
-
-    <title>Edit pokemon</title>
-</head>
-<body>
-    <h1>Edit pokemon <%= pokemon.name %></h1>
-    <form action="'/pokemon<%= pokemon.id %> ?_method=PUT" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<%= pokemon.name %>"> required>
-        <label for="img">Image URL:</label>
-        <input type="text" id="name" name="name" value="<%= pokemon.name %>"> required>
-        <label for="type">Types:</label>
-        <input for="hp">HP:</label>
-        <input type="number" id="hp" name="stats[hp]" value="<%= pokemon.stats.hp %>" required>
-        <label for="attack">Attack:</label>
-        <input type="number" id="attack" name="stats[attack]" value ="<%= pokemon.stats.attack %>" required>
-        <label for="defense">Defense:</label>
-        <input type="number" id="defense" name="stats[defense]" value ="<%= pokemon.stats.defense %>" required>
-        <input type="submit">Update</button>
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <h1>Edit Pokemon</h1>
+    <h2><%=data.name%></h2>
+    <img src='<%=data.img%>'/>
+    <form action="/<%=i%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%=data.name%>">
+        Type: <input type="text" name="type" value="<%=data.type%>">
+        HP: <input type="text" name="stats[hp]" 
+        value="<%= (data.stats.attack)%>"/>
+        Attack: <input type="text" name="stats[attack]"
+        value="<%= data.stats.attack %>"/>
+        Defense: <input type="text" name="stats[defense]"
+        value="<%= data.stats.defense %>"/><br />
+        Special Attack: <input type="text" name="stats[spattack]" value="<%= data.stats.spattack %>"/><br />
+        Special Defense: <input type="text" name="stats[spdefense]" value="<%=data.stats.spdefense %>"><br />
+        Edit Image: <input type="hidden" name="img" value="<%=data.img %>"/>
+        <br/>
+        <input type="submit" name="" value="Submit Changes" />
     </form>
-    <br>
-    <a href="/">Back to List</a>
-</body>
+  </body>
 </html>
+

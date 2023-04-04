@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Create a new Pokemon!</title>
+  </head>
+  <body>
+    <h1>New Pokemon</h1>
+    <form action="/" method="POST">
+      Name: <input type="text" name="name" /><br />
+      Type: <input type="text" name="type" /><br />
+      HP: <input type="text" name="stats[hp]"/><br />
+      Attack: <input type="text" name="stats[attack]"/><br />
+      Defense: <input type="text" name="stats[defense]"/><br />
+      Special Attack: <input type="text" name="stats[spattack]"/><br />
+      Special Defense: <input type="text" name="stats[spdefense]"/><br />
+      <input type="hidden" name="img" value="https://i.ebayimg.com/images/g/FJ4AAOSwF15Zy90r/s-l500.jpg"/>
+      
+      <input type="submit" value="Create Pokemon" />
+    </form>
+  </body>
+</html>
