@@ -54,33 +54,14 @@ pokemon: pokemon[req.params.id],
 index: req.params.id, 
 }
 )})
-  
+
+//Show
 
 app.get("/pokemon/:indexOfpokemonArray", (req, res) => {
     res.render("show.ejs",{pokemon: pokemon [req.params.indexOfpokemonArray]})
   })
+  
 
-
-app.put("/pokemon/:indexOfpokemonArray", (req, res) => {
-    pokemon[req.params.indexOfpokemonArray] = {
-      name: req.body.name,
-      img: req.body.img,
-      types: req.body.type,
-      hp: req.body.hp,
-      attack: req.body.attack,
-      defense: req.body.defense,
-      id: req.params.indexOfpokemonArray
-    };
-    res.redirect("/pokemon");
-  });
-  
-  
-  
-app.delete("/pokemon/:indexOfpokemonArray", (req, res) => {
-    pokemon.splice(req.params.indexOfpokemonArray, 1);
-    res.redirect("/pokemon");
-  });
-  
 app.listen(port, () => {
     console.log(`catch them all on ${port}`);
 })
