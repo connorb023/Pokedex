@@ -33,6 +33,7 @@ app.put("/pokemon/:id/", (req, res) => {
   res.redirect("/pokemon") 
 })
 
+//Create
 app.post("/pokemon", (req, res) => {
     pokemon.push({
       name: req.body.name,
@@ -45,9 +46,14 @@ app.post("/pokemon", (req, res) => {
     res.redirect("/pokemon")
   })
   
-app.get("/pokemon/:indexOfpokemonArray/edit", (req, res) => {
-    res.render("edit.ejs", { pokemon: pokemon[req.params.indexOfpokemonArray], indexOfpokemonArray: req.params.indexOfpokemonArray });
-  });
+ //Edit 
+ app.get("/pokemon/:id/edit", (req,res) => {
+  res.render("edit.ejs", {
+  
+pokemon: pokemon[req.params.id], 
+index: req.params.id, 
+}
+)})
   
 
 app.get("/pokemon/:indexOfpokemonArray", (req, res) => {
