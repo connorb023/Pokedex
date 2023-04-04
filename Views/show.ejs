@@ -11,20 +11,18 @@
     <h1><%= pokemon.name %></h1>
     <h2> 
         <img src="<%=pokemon.img %>" alt="Pokemon photo">
-        Id:<%=pokemon.id; %> 
-        Type: <%=pokemon.type; %>
         
         </h2>
         <li>
-            <h3>Type <br /> <%= data.type %></h3>
+            <h3>Type <br /> <%= pokemon.type %></h3>
             <div>
                 <h3>Stats </h3>
-                HP: <%= data.stats.hp %><br />
-                Attack: <%= data.stats.attack %><br />
-                Defense: <%= data.stats.defense%><br />
-                Special Attack: <%= data.stats.spattack %><br />
-                Special Defense: <%= data.stats.spdefense %><br />
-                Speed:<%= data.stats.hp %><br />
+                HP: <%= pokemon.stats.hp %><br />
+                Attack: <%= pokemon.stats.attack %><br />
+                Defense: <%= pokemon.stats.defense%><br />
+                Special Attack: <%= pokemon.stats.spattack %><br />
+                Special Defense: <%= pokemon.stats.spdefense %><br />
+                Speed:<%= pokemon.stats.hp %><br />
             </div>
             <a href="/pokemon">Go Back</a>
             <p></p>
