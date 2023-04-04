@@ -14,7 +14,7 @@
 
       </nav>
     <img id="img" src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png"></img>
-    <a id="anchor" href="/new">Create a Pokemon</a>
+    
     <ul>
         <% for(let i = 0; i < pokemon.length; i++) { %>
         <li id="li">
@@ -24,7 +24,7 @@
             <a href="pokemon/<%=i%>/edit"><button type="button" id ="edit" >EDIT</button></a>
           </form>
             </form>
-            <a href="/<%=i %>/edit">Edit</a>
+    
         </li>
         <% } %>
     </ul>
